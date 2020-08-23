@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>HS-Trading</h1>
+
+
+    <table>
+        {% for offer in offers %}
+            <tr>
+                <td>{{ offer.user }}</td>
+                <td>{{ offer.price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <table class="table table-sm ">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Level of artifacts</th>
+            <th scope="col">Type of artifacts</th>
+            <th scope="col">Amount of artifacts</th>
+
+            <th scope="col">Level of artifacts</th>
+            <th scope="col">Type of artifact</th>
+            <th scope="col">Amount of artifacts</th>
+            <th scope="col">HS-Username</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for offer in offers %}
+            <tr>
+                <td>{{ offer.id}}</td>
+                <td>{{ offer.offer_artifacts_lvl}}</td>
+                <td>{{ offer.offer_artifacts_type}}</td>
+                <td>{{ offer.offer_artifacts_amount}}</td>
+                <td>{{ offer.demand_artifacts_lvl}}</td>
+                <td>{{ offer.demand_artifacts_type}}</td>
+                <td>{{ offer.demand_artifacts_amount}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+
+{% endblock %}

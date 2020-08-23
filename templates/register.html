@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+
+        <div class="col-1">
+            <form method="post">
+                <label for="username">Username</label>
+                <input name="username" id="username" required>
+                <label for="password1">Password</label>
+                <input type="password" name="password1" id="password1" required>
+
+                <label for="password2">Password wiederholen</label>
+                <input type="password1" name="password2" id="password2" required>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+{% endblock %}
