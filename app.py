@@ -119,6 +119,10 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('index'))
 
+# Profil
+@app.route('/profile')
+def Profil():
+    return render_template('profile.html')
 
 def main():
     app.run('127.0.0.1', 8080, debug=True)

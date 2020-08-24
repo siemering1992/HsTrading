@@ -1,14 +1,8 @@
 
-
-
-.hidden{
+.hidden {
     display: None;
 }
 
-#float-right{
-    position: absolute;
-    top: 0;
-    right:0;
-    padding-left: 30px;
-
+h1 {
+    text-align: center;
 }
