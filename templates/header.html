@@ -1,61 +1,68 @@
 {% if session.username %}
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/">
+            <img src="./static/image/Logo.png" width="50" height="50" alt="Logo HST">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/create_offer">Create an Offer <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/profile">Profile <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/create_offer">Create an Offer </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/profile">Profile </a>
                 </li>
             </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <a id="btn-login" class="btn btn-outline-primary " href="/logout">Logout</a>
+            </div>
+  <!--          <div class="collapse navbar-collapse" id="navbarSupportedContent">Logged in as {{ session.username }}</div>-->
         </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">Logged in as {{ session.username }}</div>
+
     </nav>
+
 
 {% else %}
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand" href="/">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="./static/image/Logo.png" width="50" height="50" alt="Logo HST">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul  class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/login">Create an Offer </a>
                 </li>
             </ul>
-        </div>
-        <div class="d-flex flex-row-reverse">
-            <div class="m1-auto p-2">
-                <ul class="navbar-nav mr-auto">
-                    <a id="btn-login" class="btn btn-outline-primary " href="/login">Login</a>
-                </ul>
-            </div>
-        </div>
-        <div class="d-flex flex-row-reverse">
-            <div class="m1-auto p-2">
-                <ul class="navbar-nav mr-auto">
-                    <a id="btn-register" class="btn btn-outline-primary " href="/register">Register</a>
-                </ul>
-            </div>
-        </div>
+            <div class="form-inline my-3 my-lg-0">
+                <a style="margin-right: 30px;" id="btn-login" class="btn btn-outline-primary " href="/login">Login</a>
 
+
+                <a id="btn-register" class="btn btn-outline-primary " href="/register">Register</a>
+            </div>
+        </div>
     </nav>
+
+
+
 {% endif %}
 
