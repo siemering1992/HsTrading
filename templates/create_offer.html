@@ -2,58 +2,96 @@
 
 {% block content %}
 
-    <h1>Create an Offer</h1>
+    <h1 style="margin-bottom:5rem">Create an Offer</h1>
+
 
 
     <form method="post">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01">Type of artifacts</label>
-            </div>
-            <select name="offer_artifacts_type" class="custom-select col-1" id="inputGroupSelect01" required>
-                <option selected>Choose...</option>
-                <option value="Orbs">Orbs</option>
-                <option value="Blue Crystals">Blue Crystals</option>
-                <option value="Tetrahedrons">Tetrahedrons</option>
-                <option value="Mixed">Mixed</option>
-            </select>
-
-            <div class="input-group-prepend">
-                <label class="input-group-text " for="inputGroupSelect01">Level of artifacts</label>
-            </div>
-            <select name="offer_artifacts_lvl" class="custom-select col-1" id="inputGroupSelect01" required>
-                <option selected>Choose...</option>
-                <option value="1">RR1</option>
-                <option value="2">RR2</option>
-                <option value="3">RR3</option>
-                <option value="4">RR4</option>
-                <option value="5">RR5</option>
-                <option value="6">RR6</option>
-                <option value="7">RR7</option>
-                <option value="8">RR8</option>
-                <option value="9">RR9</option>
-                <option value="10">RR10</option>
-            </select>
 
 
-            <div class="form-group row ">
-                <label for="example-number-input" class="col-3 col-form-label">Amount</label>
-                <div class="col-4">
-                    <input name="offer_artifacts_amount" class="form-control form-control-sm" type="number" value="0"
-                           id="amount-input" required>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+
+                    <div class="row justify-content-center">
+                        <img src="static/image/artifacts/Orb_1-0.png" alt="..." class="img-fluid">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 text-center">
+
+                            <input type="checkbox"
+                                   id="blankCheckbox"
+                                   value="option1" aria-label="...">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <select class="custom-select custom-select-lg">
+                                <option selected>Level</option>
+                                <option value="1">RR1</option>
+                                <option value="2">RR2</option>
+                                <option value="3">RR3</option>
+                                <option value="4">RR4</option>
+                                <option value="5">RR5</option>
+                                <option value="6">RR6</option>
+                                <option value="7">RR7</option>
+                                <option value="8">RR8</option>
+                                <option value="9">RR9</option>
+                                <option value="10">RR10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input name="demand_artifacts_amount"
+                                   class="form-control form-control-lg"
+                                   type="number"
+                                   placeholder="Amount"
+                                   id="amount-input" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md">
+                    <div class="mx-auto">
+                        <img src="static/image/artifacts/Bluecrystal_1.png" alt="..."
+                             class="center">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                               value="option1" aria-label="...">
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="mx-auto">
+                        <img src="static/image/artifacts/Tetrahedron_2.png" alt="..."
+                             class="center">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                               value="option1" aria-label="...">
+                    </div>
                 </div>
             </div>
+    </form>
 
-        </div>
 
-        <h1>My Demand</h1>
 
+
+
+
+
+    <!--
         <form method="post">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Type of artifacts</label>
                 </div>
-                <select name="demand_artifacts_type" class="custom-select col-1" id="inputGroupSelect01" required>
+                <select name="offer_artifacts_type" class="custom-select col-1" id="inputGroupSelect01" required>
                     <option selected>Choose...</option>
                     <option value="Orbs">Orbs</option>
                     <option value="Blue Crystals">Blue Crystals</option>
@@ -64,7 +102,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text " for="inputGroupSelect01">Level of artifacts</label>
                 </div>
-                <select name="demand_artifacts_lvl" class="custom-select col-1" id="inputGroupSelect01" required>
+                <select name="offer_artifacts_lvl" class="custom-select col-1" id="inputGroupSelect01" required>
                     <option selected>Choose...</option>
                     <option value="1">RR1</option>
                     <option value="2">RR2</option>
@@ -82,14 +120,59 @@
                 <div class="form-group row ">
                     <label for="example-number-input" class="col-3 col-form-label">Amount</label>
                     <div class="col-4">
-                        <input name="demand_artifacts_amount" class="form-control form-control-sm" type="number"
-                               value="0" id="amount-input" required>
+                        <input name="offer_artifacts_amount" class="form-control form-control-sm" type="number" value="0"
+                               id="amount-input" required>
                     </div>
                 </div>
-                <input type="submit" value="Create">
+
             </div>
 
-        </form>
+            <h1>My Demand</h1>
+
+            <form method="post">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Type of artifacts</label>
+                    </div>
+                    <select name="demand_artifacts_type" class="custom-select col-1" id="inputGroupSelect01" required>
+                        <option selected>Choose...</option>
+                        <option value="Orbs">Orbs</option>
+                        <option value="Blue Crystals">Blue Crystals</option>
+                        <option value="Tetrahedrons">Tetrahedrons</option>
+                        <option value="Mixed">Mixed</option>
+                    </select>
+
+                    <div class="input-group-prepend">
+                        <label class="input-group-text " for="inputGroupSelect01">Level of artifacts</label>
+                    </div>
+                    <select name="demand_artifacts_lvl" class="custom-select col-1" id="inputGroupSelect01" required>
+                        <option selected>Choose...</option>
+                        <option value="1">RR1</option>
+                        <option value="2">RR2</option>
+                        <option value="3">RR3</option>
+                        <option value="4">RR4</option>
+                        <option value="5">RR5</option>
+                        <option value="6">RR6</option>
+                        <option value="7">RR7</option>
+                        <option value="8">RR8</option>
+                        <option value="9">RR9</option>
+                        <option value="10">RR10</option>
+                    </select>
+
+
+                    <div class="form-group row ">
+                        <label for="example-number-input" class="col-3 col-form-label">Amount</label>
+                        <div class="col-4">
+                            <input name="demand_artifacts_amount" class="form-control form-control-sm" type="number"
+                                   value="0" id="amount-input" required>
+                        </div>
+                    </div>
+                    <input type="submit" value="Create">
+                </div>
+
+            </form> -->
+
+
 
 
 
