@@ -32,12 +32,12 @@
             {% for offer in offers %}
             <tr>
                 <td>{{ offer.id}}</td>
-                <td>{{ offer.offer_artifacts_lvl}}</td>
-                <td>{{ offer.offer_artifacts_type}}</td>
-                <td>{{ offer.offer_artifacts_amount}}</td>
-                <td>{{ offer.demand_artifacts_lvl}}</td>
-                <td>{{ offer.demand_artifacts_type}}</td>
-                <td>{{ offer.demand_artifacts_amount}}</td>
+                <td>{{ offer.offer_lvl}}</td>
+                <td>{{ offer.offer_type}}</td>
+                <td>{{ offer.offer_amount}}</td>
+                <td>{{ offer.demands_lvl}}</td>
+                <td>{{ offer.demand_type}}</td>
+                <td>{{ offer.demand_amount}}</td>
             </tr>
             {% endfor %}
             </tbody>
