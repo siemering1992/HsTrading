@@ -29,8 +29,8 @@
 
                     <div class="row">
                         <div class="col">
-                            <select name="offer_orb_lvl" class="custom-select custom-select-lg " >
-                                <option value="null" selected >Level</option>
+                            <select name="offer_orb_lvl" class="custom-select custom-select-lg ">
+                                <option value="null" selected>Level</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -159,7 +159,7 @@
                 <div class="col-md">
 
                     <div class="row justify-content-center mt-1">
-                        <img src="static/image/artifacts/Orb_1-0.png" alt="..." class="img-fluid">
+                        <img id="demand-orb-img" src="static/image/artifacts/Orb_1.png" alt="..." class="img-fluid">
                     </div>
 
                     <div class="row">
@@ -174,7 +174,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <select name="demand_orb_lvl" class="custom-select custom-select-lg">
+                            <select name="demand_orb_lvl" class="custom-select custom-select-lg"  onchange="updateImage(this, '#demand-orb-img');">
                                 <option value="null" selected>Level</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -205,7 +205,7 @@
                 <div class="col-md">
 
                     <div class="row justify-content-center mt-1">
-                        <img src="static/image/artifacts/Bluecrystal_1.png" alt="..." class="img-fluid">
+                        <img id="demand-bluecrystal-img" src="static/image/artifacts/Bluecrystal_1.png" alt="..." class="img-fluid">
                     </div>
 
 
@@ -222,7 +222,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <select name="demand_bluecrystal_lvl" class="custom-select custom-select-lg">
+                            <select name="demand_bluecrystal_lvl" class="custom-select custom-select-lg"  onchange="updateImage(this, '#demand-bluecrystal-img');">
                                 <option value="null" selected>Level</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -253,7 +253,7 @@
                 <div class="col-md">
 
                     <div class="row justify-content-center mt-1">
-                        <img src="static/image/artifacts/Tetrahedron_2.png" alt="..." class="img-fluid">
+                        <img id="demand-tetra-img" src="static/image/artifacts/Tetrahedron_2.png" alt="..." class="img-fluid">
                     </div>
 
 
@@ -270,7 +270,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <select name="demand_tetrahedron_lvl" class="custom-select custom-select-lg">
+                            <select name="demand_tetrahedron_lvl" class="custom-select custom-select-lg" onchange="updateImage(this, '#demand-tetra-img');">
                                 <option value="null" selected>Level</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -299,13 +299,28 @@
             </div>
 
 
-
             <input type="submit" value="Create">
     </form>
 
 
 
+    <script>
+        function updateImage(element, selector){
 
+            value = element.value === "null"? "1": element.value;
+
+            if (selector.includes('tetra')){
+                url = `static/image/artifacts/Tetrahedron_${value}.png`;
+            } else if (selector.includes('orb')){
+                url = `static/image/artifacts/Orb_${value}.png`;
+            } else if (selector.includes('bluecrystal')){
+                url = `static/image/artifacts/Bluecrystal_${value}.png`;
+            }
+
+            img = document.querySelector(selector);
+            img.src = url;
+        };
+    </script>
 
 
 
