@@ -13,23 +13,13 @@
             <div class="row">
                 <div class="col-md">
 
-                    <div class="row justify-content-center mt-1 ">
-                        <img src="static/image/artifacts/Orb_1-0.png" alt="..." class="img-fluid">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 text-center mb-2 mt-2">
-
-                            <input type="checkbox"
-                                   name="offer_orb_type"
-                                   id="blankCheckbox"
-                                   value="orb" aria-label="close">
-                        </div>
+                    <div class="row justify-content-center mt-1 pb-4 ">
+                        <img id="offer-orb-img" src="static/image/artifacts/Orb_1.png" alt="..." class="img-fluid">
                     </div>
 
                     <div class="row">
                         <div class="col">
-                            <select name="offer_orb_lvl" class="custom-select custom-select-lg ">
+                            <select name="offer_orb_lvl" class="custom-select custom-select-lg" onchange="updateImage(this, '#offer-orb-img');">
                                 <option value="null" selected>Level</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -44,8 +34,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
+                    <div class="row ">
+                        <div class="col ">
                             <input name="offer_orb_amount"
                                    class="form-control form-control-lg"
                                    type="number"
@@ -59,25 +49,16 @@
 
                 <div class="col-md">
 
-                    <div class="row justify-content-center mt-1">
-                        <img src="static/image/artifacts/Bluecrystal_1.png" alt="..." class="img-fluid">
+                    <div class="row justify-content-center mt-1 pb-4">
+                        <img id="offer-bluecrystal-img" src="static/image/artifacts/Bluecrystal_1.png" alt="..." class="img-fluid">
                     </div>
 
 
-                    <div class="row">
-                        <div class="col-12 text-center mb-2 mt-2">
 
-                            <input type="checkbox"
-                                   name="offer_bluecrystal_type"
-                                   id="blankCheckbox"
-                                   value="bluecrystal"
-                                   aria-label="...">
-                        </div>
-                    </div>
 
                     <div class="row">
                         <div class="col">
-                            <select name="offer_bluecrystal_lvl" class="custom-select custom-select-lg">
+                            <select name="offer_bluecrystal_lvl" class="custom-select custom-select-lg" onchange="updateImage(this, '#offer-bluecrystal-img');">
                                 <option value="null" selected>Level</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -107,24 +88,14 @@
 
                 <div class="col-md">
 
-                    <div class="row justify-content-center mt-1">
-                        <img src="static/image/artifacts/Tetrahedron_2.png" alt="..." class="img-fluid">
+                    <div class="row justify-content-center mt-1 pb-4">
+                        <img id="offer-tetra-img" src="static/image/artifacts/Tetrahedron_2.png" alt="..." class="img-fluid">
                     </div>
 
-
-                    <div class="row">
-                        <div class="col-12 text-center mb-2 mt-2">
-
-                            <input type="checkbox"
-                                   name="offer_tetrahedron_type"
-                                   id="blankCheckbox"
-                                   value="tetrahedron" aria-label="...">
-                        </div>
-                    </div>
 
                     <div class="row">
                         <div class="col">
-                            <select name="offer_tetrahedron_lvl" class="custom-select custom-select-lg">
+                            <select name="offer_tetrahedron_lvl" class="custom-select custom-select-lg" onchange="updateImage(this, '#offer-tetra-img');">
                                 <option value="null" selected>Level</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -158,19 +129,11 @@
             <div class="row">
                 <div class="col-md">
 
-                    <div class="row justify-content-center mt-1">
+                    <div class="row justify-content-center mt-1 pb-4">
                         <img id="demand-orb-img" src="static/image/artifacts/Orb_1.png" alt="..." class="img-fluid">
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 text-center mb-2 mt-2">
 
-                            <input type="checkbox"
-                                   id="blankCheckbox"
-                                   value="orb" aria-label="..."
-                                   name="demand_orb_type">
-                        </div>
-                    </div>
 
                     <div class="row">
                         <div class="col">
@@ -204,21 +167,11 @@
 
                 <div class="col-md">
 
-                    <div class="row justify-content-center mt-1">
+                    <div class="row justify-content-center mt-1 pb-4">
                         <img id="demand-bluecrystal-img" src="static/image/artifacts/Bluecrystal_1.png" alt="..." class="img-fluid">
                     </div>
 
 
-                    <div class="row">
-                        <div class="col-12 text-center mb-2 mt-2">
-
-                            <input type="checkbox"
-                                   id="blankCheckbox"
-                                   value="bluecrystal"
-                                   aria-label="..."
-                                   name="demand_bluecrystal_type">
-                        </div>
-                    </div>
 
                     <div class="row">
                         <div class="col">
@@ -252,21 +205,12 @@
 
                 <div class="col-md">
 
-                    <div class="row justify-content-center mt-1">
+                    <div class="row justify-content-center mt-1 pb-4">
                         <img id="demand-tetra-img" src="static/image/artifacts/Tetrahedron_2.png" alt="..." class="img-fluid">
                     </div>
 
 
-                    <div class="row">
-                        <div class="col-12 text-center mb-2 mt-2">
 
-                            <input type="checkbox"
-                                   name="demand_tetrahedron_type"
-                                   id="blankCheckbox"
-                                   value="tetrahedron"
-                                   aria-label="...">
-                        </div>
-                    </div>
 
                     <div class="row">
                         <div class="col">
