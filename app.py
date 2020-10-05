@@ -75,45 +75,34 @@ def create_offer():
 @app.route('/create_offer', methods=['POST'])
 def offer_post():
     flash('posted new offer')
-    offer_orb_type = request.form['offer_orb_type']
     offer_orb_lvl = request.form['offer_orb_lvl']
     offer_orb_amount = request.form['offer_orb_amount']
-    offer_bluecrystal_type = request.form['offer_bluecrystal_type']
     offer_bluecrystal_lvl = request.form['offer_bluecrystal_lvl']
     offer_bluecrystal_amount = request.form['offer_bluecrystal_amount']
-    offer_tetrahedron_type = request.form['offer_tetrahedron_type']
     offer_tetrahedron_lvl = request.form['offer_tetrahedron_lvl']
     offer_tetrahedron_amount = request.form['offer_tetrahedron_amount']
 
-    demand_orb_type = request.form['demand_orb_type']
     demand_orb_lvl = request.form['demand_orb_lvl']
     demand_orb_amount = request.form['demand_orb_amount']
-    demand_bluecrystal_type = request.form['demand_bluecrystal_type']
     demand_bluecrystal_lvl = request.form['demand_bluecrystal_lvl']
     demand_bluecrystal_amount = request.form['demand_bluecrystal_amount']
-    demand_tetrahedron_type = request.form['demand_tetrahedron_type']
     demand_tetrahedron_lvl = request.form['demand_tetrahedron_lvl']
     demand_tetrahedron_amount = request.form['demand_tetrahedron_amount']
 
 
     offer_table.insert(dict(
-        offer_orb_type=offer_orb_type,
         offer_orb_lvl=offer_orb_lvl,
         offer_orb_amount=offer_orb_amount,
-        offer_bluecrystal_type=offer_bluecrystal_type,
         offer_bluecrystal_lvl=offer_bluecrystal_lvl,
         offer_bluecrystal_amount=offer_bluecrystal_amount,
-        offer_tetrahedron_type=offer_tetrahedron_type,
         offer_tetrahedron_lvl=offer_tetrahedron_lvl,
         offer_tetrahedron_amount=offer_tetrahedron_amount,
 
-        demand_orb_type = demand_orb_type,
+
         demand_orb_lvl = demand_orb_lvl,
         demand_orb_amount = demand_orb_amount,
-        demand_bluecrystal_type = demand_bluecrystal_type,
         demand_bluecrystal_lvl = demand_bluecrystal_lvl,
         demand_bluecrystal_amount = demand_bluecrystal_amount,
-        demand_tetrahedron_type = demand_tetrahedron_type,
         demand_tetrahedron_lvl = demand_tetrahedron_lvl,
         demand_tetrahedron_amount = demand_tetrahedron_amount,))
     return redirect('')
